@@ -1,0 +1,269 @@
+{
+  "utilities": [
+    {
+      "branches": [
+        {
+          "condition": {
+            "operator" : "AND",
+            "arguments": [
+              {
+                "operator" : "EQUALS",
+                "arguments": [
+                  {
+                    "encoding"   : "entity3",
+                    "signature"  : {
+                      "name"     : "at",
+                      "arguments": [
+                        {
+                          "code"       : "001",
+                          "id"         : 0,
+                          "name"       : "Player",
+                          "description": "the player",
+                          "type"       : "Entity"
+                        }
+                      ]
+                    },
+                    "id"         : 0,
+                    "name"       : "at(Player)",
+                    "description": "the player\u0027s location",
+                    "type"       : "Variable"
+                  },
+                  {
+                    "code"       : "011",
+                    "id"         : 2,
+                    "name"       : "Outside",
+                    "description": "outside the shop",
+                    "type"       : "Entity"
+                  }
+                ],
+                "type"     : "Proposition"
+              },
+              {
+                "operator" : "OR",
+                "arguments": [
+                  {
+                    "operator" : "EQUALS",
+                    "arguments": [
+                      {
+                        "encoding"   : "entity3",
+                        "signature"  : {
+                          "name"     : "has",
+                          "arguments": [
+                            {
+                              "code"       : "110",
+                              "id"         : 5,
+                              "name"       : "Coffee",
+                              "description": "a cup of coffee",
+                              "type"       : "Entity"
+                            }
+                          ]
+                        },
+                        "id"         : 3,
+                        "name"       : "has(Coffee)",
+                        "description": "who has the coffee",
+                        "type"       : "Variable"
+                      },
+                      {
+                        "code"       : "001",
+                        "id"         : 0,
+                        "name"       : "Player",
+                        "description": "the player",
+                        "type"       : "Entity"
+                      }
+                    ],
+                    "type"     : "Proposition"
+                  },
+                  {
+                    "operator" : "EQUALS",
+                    "arguments": [
+                      {
+                        "encoding"   : "entity3",
+                        "signature"  : {
+                          "name"     : "has",
+                          "arguments": [
+                            {
+                              "code"       : "111",
+                              "id"         : 6,
+                              "name"       : "Tea",
+                              "description": "a cup of herbal tea",
+                              "type"       : "Entity"
+                            }
+                          ]
+                        },
+                        "id"         : 4,
+                        "name"       : "has(Tea)",
+                        "description": "who has the tea",
+                        "type"       : "Variable"
+                      },
+                      {
+                        "code"       : "001",
+                        "id"         : 0,
+                        "name"       : "Player",
+                        "description": "the player",
+                        "type"       : "Entity"
+                      }
+                    ],
+                    "type"     : "Proposition"
+                  },
+                  {
+                    "operator" : "EQUALS",
+                    "arguments": [
+                      {
+                        "encoding"   : "entity3",
+                        "signature"  : {
+                          "name"     : "has",
+                          "arguments": [
+                            {
+                              "code"       : "101",
+                              "id"         : 4,
+                              "name"       : "Money",
+                              "description": "some money",
+                              "type"       : "Entity"
+                            }
+                          ]
+                        },
+                        "id"         : 2,
+                        "name"       : "has(Money)",
+                        "description": "who has the money",
+                        "type"       : "Variable"
+                      },
+                      {
+                        "code"       : "010",
+                        "id"         : 1,
+                        "name"       : "Barista",
+                        "description": "the barista",
+                        "type"       : "Entity"
+                      }
+                    ],
+                    "type"     : "Proposition"
+                  }
+                ],
+                "type"     : "Proposition"
+              }
+            ],
+            "type"     : "Proposition"
+          },
+          "value"    : {"value": 1, "type": "Constant"}
+        }
+      ]
+    },
+    {
+      "character": "Player",
+      "branches" : [
+        {
+          "condition": {
+            "operator" : "OR",
+            "arguments": [
+              {
+                "operator" : "EQUALS",
+                "arguments": [
+                  {
+                    "encoding"   : "entity3",
+                    "signature"  : {
+                      "name"     : "has",
+                      "arguments": [
+                        {
+                          "code"       : "110",
+                          "id"         : 5,
+                          "name"       : "Coffee",
+                          "description": "a cup of coffee",
+                          "type"       : "Entity"
+                        }
+                      ]
+                    },
+                    "id"         : 3,
+                    "name"       : "has(Coffee)",
+                    "description": "who has the coffee",
+                    "type"       : "Variable"
+                  },
+                  {
+                    "code"       : "001",
+                    "id"         : 0,
+                    "name"       : "Player",
+                    "description": "the player",
+                    "type"       : "Entity"
+                  }
+                ],
+                "type"     : "Proposition"
+              },
+              {
+                "operator" : "EQUALS",
+                "arguments": [
+                  {
+                    "encoding"   : "entity3",
+                    "signature"  : {
+                      "name"     : "has",
+                      "arguments": [
+                        {
+                          "code"       : "111",
+                          "id"         : 6,
+                          "name"       : "Tea",
+                          "description": "a cup of herbal tea",
+                          "type"       : "Entity"
+                        }
+                      ]
+                    },
+                    "id"         : 4,
+                    "name"       : "has(Tea)",
+                    "description": "who has the tea",
+                    "type"       : "Variable"
+                  },
+                  {
+                    "code"       : "001",
+                    "id"         : 0,
+                    "name"       : "Player",
+                    "description": "the player",
+                    "type"       : "Entity"
+                  }
+                ],
+                "type"     : "Proposition"
+              }
+            ],
+            "type"     : "Proposition"
+          },
+          "value"    : {"value": 1, "type": "Constant"}
+        }
+      ]
+    },
+    {
+      "character": "Barista",
+      "branches" : [
+        {
+          "condition": {
+            "operator" : "EQUALS",
+            "arguments": [
+              {
+                "encoding"   : "entity3",
+                "signature"  : {
+                  "name"     : "has",
+                  "arguments": [
+                    {
+                      "code"       : "101",
+                      "id"         : 4,
+                      "name"       : "Money",
+                      "description": "some money",
+                      "type"       : "Entity"
+                    }
+                  ]
+                },
+                "id"         : 2,
+                "name"       : "has(Money)",
+                "description": "who has the money",
+                "type"       : "Variable"
+              },
+              {
+                "code"       : "010",
+                "id"         : 1,
+                "name"       : "Barista",
+                "description": "the barista",
+                "type"       : "Entity"
+              }
+            ],
+            "type"     : "Proposition"
+          },
+          "value"    : {"value": 1, "type": "Constant"}
+        }
+      ]
+    }
+  ]
+}
