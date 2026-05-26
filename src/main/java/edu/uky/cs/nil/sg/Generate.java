@@ -24,7 +24,7 @@ public class Generate extends StoryGraphTool {
 	public final Option OUTPUT = new Option("o", "FILE", "output file (default: world name)");
 	
 	/** Specifies the file from which to read the character utility functions */
-	public final Option UTILITY = new Option("u", "FILE", "JSON map of character/ending pairs to utility values (default: always 0)");
+	public final Option UTILITY = new Option("u", "FILE", "JSON map of character/state pairs to utility values (default: always 0)");
 	
 	/** Specifies the max depth of the expansion (0 for no limit) */
 	public final Option DEPTH = new Option("d", "NUMBER", "maximum depth to expand (default: no limit)", "0");
@@ -33,7 +33,7 @@ public class Generate extends StoryGraphTool {
 	 * Specifies the number of threads that will run simultaneously to expand
 	 * nodes
 	 */
-	public final Option THREADS = new Option("t", "NUMBER", "number of threads to run simultaneously (default: 3)", "3");
+	public final Option THREADS = new Option("t", "NUMBER", "number of threads to run simultaneously (default: 5)", "5");
 	
 	/**
 	 * Constructs a new Tandem Tales story graph generator with a set of
