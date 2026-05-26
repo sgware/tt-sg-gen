@@ -22,10 +22,9 @@ The JavaDoc API for all Java source files can be
 The Tandem Tales Story Graph Generator is written in Java and published as a
 Maven project.
 
-Four dependencies need to be installed in Maven:
-- [Google GSON](https://github.com/google/gson)
+Two dependencies need to be installed in Maven, but they in turn have other
+dependencies:
 - [Tandem Tales Server](https://github.com/sgware/tt-server)
-- [Story Graph](https://github.com/sgware/story-graph)
 - [Story Graph Tools](https://github.com/sgware/story-graph-tools)
 
 Assuming you have [Git](https://git-scm.com/install), the
@@ -33,8 +32,8 @@ Assuming you have [Git](https://git-scm.com/install), the
 [Maven](https://maven.apache.org/) installed and on your path, you can download
 the dependencies and compile this application like this:
 ```
-git clone https://github.com/google/gson.git
-cd gson
+git clone https://github.com/sgware/serialsoc
+cd serialsoc
 mvn clean install
 cd ..
 git clone https://github.com/sgware/tt-server
@@ -43,6 +42,10 @@ mvn clean install
 cd ..
 git clone https://github.com/sgware/story-graph
 cd story-graph
+mvn clean install
+cd ..
+git clone https://github.com/sgware/sabre
+cd sabre
 mvn clean install
 cd ..
 git clone https://github.com/sgware/story-graph-tools
@@ -66,13 +69,11 @@ cd tt-sg-gen/build/jar
 java -jar tt-sg-gen.jar -h
 # Download the Tandem Tales Server to get tutorial.json.
 git clone https://github.com/sgware/tt-server
-cp tt-server/worlds/tutorial.json .
 # Generate the full story graph for the tutorial world.
-java -jar tt-sg-gen.jar tutorial.json
+java -jar tt-sg-gen.jar tt-server/worlds/tutorial.json
 # Download Story Graph Tools so you can explore the graph.
 git clone https://github.com/sgware/story-graph-tools
-cp story-graph-tools/build/jar/sg-explore.jar .
-java -jar sg-explore.jar tutorial.zip
+java -jar story-graph-tools/build/jar/sg-explore.jar tutorial.zip
 ```
 
 A Tandem Tales story world does not define utility functions for the author or
@@ -82,7 +83,7 @@ a state as a JSON file like
 [`tutorial-utilities.json`](tutorial-utilities.json).
 ```
 # Generate the story graph using custom utility functions.
-java -jar tt-sg-gen.jar tutorial.json -u tutorial-utilities.json
+java -jar tt-sg-gen.jar tt-server/worlds/tutorial.json -u ../../tutorial-utilities.json
 ```
 
 Story graphs get big fast. You can limit the depth of the generation with the
@@ -104,7 +105,7 @@ modify it, running more than a few threads simultaneously has diminishing
 returns.
 ```
 # Generate the story graph using 10 simultaneous threads.
-java -jar tt-sg-gen.jar tutorial.json -t 10
+java -jar tt-sg-gen.jar tt-server/worlds/tutorial.json -t 5
 ```
 
 ## License
