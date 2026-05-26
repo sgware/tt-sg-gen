@@ -121,7 +121,6 @@ public class Generate extends StoryGraphTool {
 			graph.characters.setPlayer(graph.characters.get(player.getName()), true);
 		for(Variable variable : world.getVariables())
 			graph.fluents.add(variable.getName());
-		graph.values.add(Constant.NULL.toString());
 		graph.values.add(Constant.FALSE.toString());
 		graph.values.add(Constant.TRUE.toString());
 		for(Entity entity : world.getEntities())
